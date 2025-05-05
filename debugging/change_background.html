@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Change Background Color</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        text-align: center;
-        padding-top: 50px;
-    }
-    button {
-        padding: 10px 20px;
-        font-size: 16px;
-        cursor: pointer;
-    }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Background Color</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
 
@@ -24,17 +24,16 @@
 <button id="colorButton">Change Color</button>
 
 <script>
-    // Utilisation de window.onload pour s'assurer que le DOM est prêt
-    window.onload = function() {
-        document.getElementById("colorButton").addEventListener("click", function() {
-            changeBackgroundColor();
-        });
-    };
+    // Sélectionner le bouton et lui attacher l'événement 'click'
+    document.getElementById("colorButton").addEventListener("click", function() {
+        changeBackgroundColor();
+    });
 
+    // Fonction pour changer la couleur de fond du body
     function changeBackgroundColor() {
         // Générer une couleur aléatoire
         var randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
-        // Changer la couleur de fond du body
+        // Appliquer la nouvelle couleur de fond
         document.body.style.backgroundColor = randomColor;
     }
 </script>
