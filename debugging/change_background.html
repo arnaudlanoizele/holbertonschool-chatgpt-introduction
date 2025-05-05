@@ -25,12 +25,12 @@
 <button id="colorButton">Change Color</button>
 
 <script>
-    // Récupérer l'élément bouton avec l'ID 'colorButton'
-    document.getElementById("colorButton").onclick = function() {
+    // Ajout de l'écouteur d'événement sur le bouton avec l'ID correct
+    document.getElementById("colorButton").addEventListener("click", function() {
         changeBackgroundColor();
-    };
+    });
 
-    // Fonction pour changer la couleur de fond en une couleur aléatoire
+    // Fonction pour changer la couleur de fond
     function changeBackgroundColor() {
         var randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
         document.body.style.backgroundColor = randomColor;
