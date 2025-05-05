@@ -24,12 +24,15 @@
 <button id="colorButton">Change Color</button>
 
 <script>
-    // Attacher l'événement au bouton "Change Color"
-    document.getElementById("colorButton").onclick = function() {
+    // Assurer que l'élément avec l'id "colorButton" est sélectionné correctement.
+    const button = document.getElementById("colorButton");
+    
+    // Ajout de l'événement "click" au bouton
+    button.onclick = function() {
         changeBackgroundColor();
     };
 
-    // Fonction pour générer une couleur aléatoire et changer la couleur de fond
+    // Fonction pour générer une couleur aléatoire et changer l'arrière-plan
     function changeBackgroundColor() {
         var randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
         document.body.style.backgroundColor = randomColor;
