@@ -21,21 +21,15 @@
 
 <h2>Click the button to change the background color</h2>
 
-<!-- Corrected the ID here -->
+<!-- Assure-toi que l'ID et l'attribut sont corrects par rapport aux spécifications de Holberton -->
 <button id="colorButton">Change Color</button>
 
 <script>
-    document.getElementById("colorButton").addEventListener("click", function() {
-        changeBackgroundColor();
-    });
-
-    function changeBackgroundColor() {
-        // Generate a random color
+    document.getElementById("colorButton").onclick = function() {
+        // Fonction pour changer la couleur du fond
         var randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
-        // Ensure color code is always 6 characters long
-        randomColor = randomColor.padEnd(7, "0");
         document.body.style.backgroundColor = randomColor;
-    }
+    };
 </script>
 
 </body>
